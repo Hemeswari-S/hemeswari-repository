@@ -1,0 +1,95 @@
+Component1 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    MEnu: |-
+        =Table(
+            {
+                ttile: "SampleText",
+                target:App.ActiveScreen,
+                Sub: Table(
+                    {
+                        ttile: "Subtext",
+                        target: Screen2,
+                        Icon: Icon.Add
+                    }
+                )
+            }
+        )
+    MenuWidth: =Gallery2.Width
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Icon1 As icon.Hamburger:
+        Height: =42
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(Show,!Show)
+        Width: =51
+        ZIndex: =1
+
+    Gallery2 As gallery.variableTemplateHeightGallery:
+        DelayItemLoading: =true
+        Height: =544
+        Items: =Component1.MEnu
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =4
+        TemplateSize: =233
+        Width: =If(Show,300,1)
+        X: =40
+        Y: =92
+        ZIndex: =1
+
+        Gallery5 As gallery.variableTemplateHeightGallery:
+            DelayItemLoading: =true
+            Height: =If(ShowSubmenu,4*80,1)
+            Items: =ThisItem.Sub
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =58
+            X: =40
+            Y: =56
+            ZIndex: =1
+
+            "Icon2 As icon.'3DPrinting'":
+                Height: =58
+                Icon: =ThisItem.Icon
+                OnSelect: =Navigate(ThisItem.target)
+                X: =40
+                ZIndex: =1
+
+        Label1 As label:
+            OnSelect: |-
+                =Set(ShowSubmenu,!ShowSubmenu);
+                Navigate(ThisItem.target);
+            Text: =ThisItem.ttile
+            X: =32
+            ZIndex: =2
+
+    Container2 As groupContainer.manualLayoutContainer:
+        Height: =67
+        Width: =589
+        X: =51
+        ZIndex: =2
+
+        Icon3 As icon.Bell:
+            Height: =45
+            Icon: =Icon.Bell
+            Width: =38
+            X: =464
+            Y: =22
+            ZIndex: =1
+
+        Button2 As button:
+            Height: =30
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Text: =
+            Width: =30
+            X: =492
+            Y: =8
+            ZIndex: =2
+

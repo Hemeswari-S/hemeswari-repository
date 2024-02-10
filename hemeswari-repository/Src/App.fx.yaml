@@ -1,0 +1,12 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: =Set(DetailsLog,ClearCollect(Details,'Login Details'))
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+
