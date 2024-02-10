@@ -97,7 +97,7 @@
       "usenonblockingonstartrule": true,
       "userdefinedfunctions": false,
       "webbarcodescanner": false,
-      "zeroalltabindexes": true
+      "zeroalltabindexes": false
     },
     "Author": "",
     "BindingErrorCount": 1,
@@ -116,7 +116,7 @@
     "Id": "b203fb95-d456-4934-b379-39fe0224383a",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "ManualOfflineProfileId": null,
+    "ManualOfflineProfileId": "",
     "Name": "Test",
     "OriginatingVersion": "1.336",
     "ParserErrorCount": 0,
